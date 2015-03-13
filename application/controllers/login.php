@@ -17,6 +17,7 @@ class Login extends CI_Controller{
             //field validation succeeded, check against database
             $username = $this->input->post('username');
             $password = $this->input->post('password');
+            //$data_1['name'] = $username;
             
             //query the db
             $this->load->model('user');
@@ -32,6 +33,7 @@ class Login extends CI_Controller{
                     $this->session->set_userdata('logged_in',$sess_array);
                     
                     if($row->user_type == 'public'){
+                        $this->session->set_flashdata('uname',$username);
                         redirect('viewmap','refresh');
                     }elseif ($row->user_type == 'surveyor') {
                         redirect('design_map','refresh');

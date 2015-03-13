@@ -1,34 +1,79 @@
-<script>
-                    
-                    var historicalOverlay;
-                    function initialize(){
-                        var place = new google.maps.LatLng(40.740,-74.718);
-                        var imageBounds = google.maps.LatLngBounds(
-                                new google.maps.LatLng(40.712216, -74.22655),
-                                new google.maps.LatLng(40.773941, -74.12544)
-                                );
-                        var mapOptions = {
-                            zoom: 13,
-                            center: place
-                        };
-                        
-                        var map = new google.maps.Map(document.getElementById('map-canvas'),
-                                        mapOptions);
 
-                        historicalOverlay = new google.maps.GroundOverlay(
-                            '/digital_lands/images/maps/rf1234.jpg',
-                            imageBounds);
-                        historicalOverlay.setMap(map);
-                    }
-                    google.maps.event.addDomListener(window, 'load', initialize);
-                </script>
-	</head>	
+<!DOCTYPE html>
 
+<html>
+<?php
+?>
+  <head>
+      <title>Digital Lands</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollzer.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+        
+        <noscript>
+                <link rel="stylesheet" href="css/skel.css" />
+                <link rel="stylesheet" href="css/style.css" />
+                <link rel="stylesheet" href="css/style-wide.css" />
+        </noscript>
+        <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+                   
+    <style>
+/*      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }*/
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<!--<script src="js/jquery.min.js"></script>-->
+		
+    <script>
+// This example uses a GroundOverlay to place an image on the map
+// showing an antique map of Newark, NJ.
 
+var historicalOverlay;
 
-<body>
+function initialize() {
 
-		<!-- Header -->
+  var newark = new google.maps.LatLng(40.740, -74.18);
+  var imageBounds = new google.maps.LatLngBounds(
+      new google.maps.LatLng(40.712216, -74.22655),
+      new google.maps.LatLng(40.773941, -74.12544));
+
+  var mapOptions = {
+    zoom: 13,
+    center: newark
+  };
+
+  var map = new google.maps.Map(document.getElementById('container'),
+      mapOptions);
+
+  historicalOverlay = new google.maps.GroundOverlay(
+      '/digital_lands/images/maps/rf1234.jpg',
+      imageBounds);
+  historicalOverlay.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>      
+   <!-- Header -->
 			<div id="header" class="skel-layers-fixed">
 
 				<div class="top">
@@ -86,26 +131,25 @@
 				<!-- Intro -->
 					<section id="top" class="one dark cover">
 						<div class="container" id="map_canvas">
-							<p>
+<!--							<p>
 								<a href="#portfolio" class="button scrolly" onclick="document.getElementById("p1").innerHTML = "New text!"">Shape File</a>
 								<a href="#portfolio" class="button scrolly">Google Map</a>
 								<a href="#portfolio" class="button scrolly">Earth View</a>
-							</p>							
-							<img src="http://localhost/digital_lands/images/maps/<?php echo $rf_id.".jpg";?>">											
+							</p>											-->
 
 						</div>
 					</section>
 					
-				
+				<div id="main_canvas">fdfdfdfd</div>
 				<!-- Contact -->
 					<section id="contact" class="four">
 						<div class="container">
 
 							<header>
-								<h2 id="p1">This Land's Description</h2>
+								<h2 id="p1">Contact</h2>
 							</header>
 
-							<p><?php echo $this->session->userdata('username');?>Elementum sem parturient nulla quam placerat viverra 
+							<p>Elementum sem parturient nulla quam placerat viverra 
 							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia 
 							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc 
 							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
@@ -116,3 +160,5 @@
 			</div>
 
 		
+  </body>
+</html>
