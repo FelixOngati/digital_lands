@@ -36,7 +36,7 @@
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Land Owner</h1>
+							<h1 id="title"><?php echo $fname." ".$lname;?></h1>
 							<p>Profile Info</p>
 						</div>
 
@@ -58,8 +58,8 @@
 							<ul>
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
 								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+								<li><a href="#owner" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
+								<li><a href="#land" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
 							</ul>
 						</nav>
 						
@@ -97,12 +97,28 @@
 					</section>
 					
 				
-				<!-- Contact -->
-					<section id="contact" class="four">
+				<!-- Land Details -->
+					<section id="land" class="four">
 						<div class="container">
 
 							<header>
-								<h2 id="p1">This Land's Description</h2>
+								<h2 id="p1">This Land's Details</h2>
+							</header>
+
+							<p>Elementum sem parturient nulla quam placerat viverra 
+							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia 
+							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc 
+							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+
+						</div>
+					</section>
+
+				<!-- Owner Details -->
+					<section id="owner" class="four">
+						<div class="container">
+
+							<header>
+								<h2 id="p1">Owner's Details</h2>
 							</header>
 
 							<p><?php echo $this->session->userdata('username');?>Elementum sem parturient nulla quam placerat viverra 

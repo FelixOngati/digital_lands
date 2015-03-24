@@ -33,7 +33,7 @@ class Login extends CI_Controller{
                     $this->session->set_userdata('logged_in',$sess_array);
                     
                     if($row->user_type == 'public'){
-                        $this->session->set_flashdata('uname',$username);
+                        $this->session->set_userdata('uname',$username);
                         redirect('viewmap','refresh');
                     }elseif ($row->user_type == 'surveyor') {
                         redirect('design_map','refresh');
