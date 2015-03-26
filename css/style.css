@@ -38,6 +38,7 @@
 		font-weight: 300;
 		line-height: 1.75em;
 		color: #888;
+		background: url(../images/about.jpg) no-repeat bottom center scroll;
 	}
 
 	h1,h2,h3,h4,h5,h6
@@ -537,7 +538,8 @@
 		width: 375px;
 		height: 100%;
 		color: #fff;
-		background: #222629 url('images/overlay.png');
+		/*background: #222629 url('images/overlay.png');*/
+		background: url(../images/about.jpg) no-repeat bottom center scroll;
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0,0,0,0.1);
 		text-align: right;
 	}

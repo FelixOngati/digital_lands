@@ -59,7 +59,15 @@
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
 								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
 								<li><a href="#owner" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
-								<li><a href="#land" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+								<li><a href="buymap" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope"><h4>Buy this Map</h4></span></a></li>
+								<li><a href="#land" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Lands Registry</span></a></li>								
+								<li><ul>
+									<?php $mylands = $myclass->parse_my_lands("28933728");?>
+									<?php foreach($mylands as $data){
+										?><li><a href="viewmap/getland/<?php echo $data->rf_id;?>" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope"><?php echo $data->rf_id;?></span></a></li></li>
+									<?php }?>
+								    </ul>
+									
 							</ul>
 						</nav>
 						
@@ -86,11 +94,11 @@
 				<!-- Intro -->
 					<section id="top" class="one dark cover">
 						<div class="container" id="map_canvas">
-							<p>
+							<!-- <p>
 								<a href="#portfolio" class="button scrolly" onclick="document.getElementById("p1").innerHTML = "New text!"">Shape File</a>
 								<a href="#portfolio" class="button scrolly">Google Map</a>
 								<a href="#portfolio" class="button scrolly">Earth View</a>
-							</p>							
+							</p> -->							
 							<img src="http://localhost/digital_lands/images/maps/<?php echo $rf_id.".jpg";?>">											
 
 						</div>
