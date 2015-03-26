@@ -36,7 +36,7 @@ class Login extends CI_Controller{
                         $this->session->set_userdata('uname',$username);
                         redirect('viewmap',$username);
                     }elseif ($row->user_type == 'surveyor') {
-                        redirect('design_map','refresh');
+                        redirect('upload','refresh');
                     }
                 }                
                  

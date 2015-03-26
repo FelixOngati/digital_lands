@@ -58,6 +58,12 @@ class Map extends CI_Model
         $this->db->set('fr_id',$param);
         $this->db->set('status',0);
         $this->db->insert('tblBuyOrders'); 
+
+        $data["title"] = "Digital Lands";
+        $this->load->view('templates/header',$data);
+        $this->load->view('templates/nav');
+        $this->load->view('buymap_notification');
+        $this->load->view('templates/footer');
     }
 
     function all_my_lands($param){

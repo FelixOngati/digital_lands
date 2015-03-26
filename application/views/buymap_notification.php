@@ -1,5 +1,4 @@
-    <?php?>
-    <!-- Intro Header -->
+     <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body">
             <div class="container">

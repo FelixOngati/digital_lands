@@ -23,9 +23,10 @@
                         $data = array('id' => "form_holder");
                         echo form_open('buymap/place_request',$data)
                         ;?>
-                        <p><?php echo form_submit('submit','Continue');?>&nbsp;<?php 
-                            $attributes = array('style' => 'color: #000;');
-                        echo form_submit('cancel','Cancel');?></p>                                         
+                        <p>
+                        <?php $attributes = array('style' => 'color: #000;');
+                        echo form_submit('submit','Continue');?>&nbsp;
+                        <?php echo form_submit('cancel','Cancel');?></p>                                         
                     </div>
                 </div>
             </div>

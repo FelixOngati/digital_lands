@@ -7,10 +7,10 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Digital Lands</h1>
-                        <p class="intro-text">Add Homepage Content Here</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
+                        <p class="intro-text">Digital Lands enables the public to buy maps as well as make online applications of title deeds.</p>
+                        <!-- <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>About Digital Lands?</h2>
-                <p>Put the about info here.</p>                
+                <p>Digital Lands is a platform that enables the public to buy maps as well as make online applications of title deeds.</p>                
             </div>
         </div>
     </section>
