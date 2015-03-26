@@ -29,6 +29,11 @@ class Buymap extends CI_Controller {
 		//echo $this->session->userdata('frid');
 		$this->load->model('map');
 		$this->map->insert_buy_request($this->session->userdata('frid'));
+		$data["title"] = "Digital Lands";
+		$this->load->view('templates/header',$data);
+		$this->load->view('templates/nav');
+		$this->load->view('buymap_notification');
+		$this->load->view('templates/footer');
 	}
 }
 
